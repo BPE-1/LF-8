@@ -1,5 +1,5 @@
 
-# Variante 1
+# Variante 1 / Leere Objekte, Attribute werden nachträglich gesetzt
 
 class Character:
     def __init__(self):
@@ -19,7 +19,7 @@ class Character:
 
 # Ermöglicht bessere Objektausgabe aller Werte / Alternative zu __dict__       
     def __str__(self):
-        return f"Character\nName = {self.name},\nGröße = {self.height}m,\nGewicht = {self.weight}kg,\nGeschlecht = {self.sex},\nLebenspunkte = {self.lp}"
+        return f"\nCharacter\nName = {self.name}\nGröße = {self.height}m\nGewicht = {self.weight}kg\nGeschlecht = {self.sex}\nLebenspunkte = {self.lp}\n"
         
 # Erstellung eines Objects der Class Character        
 char1 = Character()
@@ -39,8 +39,8 @@ char2.sex = "W"
 char2.lp = 75
 
 # Zeigt alle Attribute an 
-print(char1.__dict__) 
-print(char2.__dict__) 
+print("\n",char1.__dict__,"\n") 
+print("\n",char2.__dict__,"\n") 
 
 # Zugriff auf einzelnes oder mehrere Attribute mit . Opperator
 print(char1.name)
@@ -52,3 +52,4 @@ char2.fight()
 
 # Ausgabe aller Werte durch oben benutzte __str__ Funktion
 print(char1)
+print(char2)

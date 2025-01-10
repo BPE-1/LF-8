@@ -19,7 +19,7 @@ class Character:
 
 # Ermöglicht bessere Objektausgabe aller Werte / Alternative zu __dict__       
     def __str__(self):
-        return f"Character\nName = {self.name},\nGröße = {self.height}m,\nGewicht = {self.weight}kg,\nGeschlecht = {self.sex},\nLebenspunkte = {self.lp})"
+        return f"Character\nName = {self.name},\nGröße = {self.height}m,\nGewicht = {self.weight}kg,\nGeschlecht = {self.sex},\nLebenspunkte = {self.lp}"
         
 # Erstellung eines Objects der Class Character        
 char1 = Character()

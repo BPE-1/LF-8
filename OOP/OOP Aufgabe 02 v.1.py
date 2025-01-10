@@ -1,3 +1,4 @@
+
 # Variante 1
 
 class Character:
@@ -15,6 +16,10 @@ class Character:
         print(self.name, "Kämpft")
     def defend(self):
         print(self.name, "verteidigt") 
+
+# Ermöglicht bessere Objektausgabe aller Werte / Alternative zu __dict__       
+    def __str__(self):
+        return f"Character\nName = {self.name},\nGröße = {self.height}m,\nGewicht = {self.weight}kg,\nGeschlecht = {self.sex},\nLebenspunkte = {self.lp})"
         
 # Erstellung eines Objects der Class Character        
 char1 = Character()
@@ -44,3 +49,6 @@ print(char2.name, char2.height)
 # Funktionsaufruf
 char1.run()
 char2.fight()
+
+# Ausgabe aller Werte durch oben benutzte __str__ Funktion
+print(char1)
